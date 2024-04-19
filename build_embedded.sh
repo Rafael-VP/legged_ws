@@ -3,7 +3,7 @@
 if [ -z $1 ]; then
     echo "Please, give me a board image name."
 else
-    DOCKER_FOLDER=docker/dockerfiles
+    DOCKER_FOLDER=./dockerfiles
 
     if [ -e $DOCKER_FOLDER/emb-$1.dockerfile ]; then
         docker build --build-arg USER=$USER -f $DOCKER_FOLDER/emb-$1.dockerfile -t leggedroboticsusp/legged-ws:emb-$1 .

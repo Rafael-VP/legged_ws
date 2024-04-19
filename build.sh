@@ -3,7 +3,7 @@
 if [ -z $1 ]; then
     echo "Please, give me a ROS image name."
 else
-    DOCKER_FOLDER=docker/dockerfiles
+    DOCKER_FOLDER=./dockerfiles
 
     if [ -e $DOCKER_FOLDER/ros-$1.dockerfile ]; then
         docker build -f $DOCKER_FOLDER/ros-$1.dockerfile -t leggedroboticsusp/legged-ws:ros-$1 .

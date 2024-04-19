@@ -13,10 +13,10 @@ RUN apt install curl git build-essential -y
 RUN apt-get update
 
 # Install Python 3.6.9
-RUN apt install python3 python3-pip python3-venv python-dev -y
+RUN apt install python3.7 python3-pip python3.7-venv python3.7-dev -y
 
 # Install PlatformIO
-RUN /usr/bin/python3 -m pip install platformio==6.1.6
+RUN /usr/bin/python3.7 -m pip install platformio==6.1.6
 
 RUN apt install nano
 

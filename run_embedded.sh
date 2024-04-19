@@ -31,12 +31,11 @@ else
         USE_GPUS=""
         echo "NVIDIA's GPU WAS NOT detected."
     else
-        USE_GPUS="--gpus all"
+        USE_GPUS=""
         echo "NVIDIA's GPU WAS detected. Activating '--gpus all' flag."
     fi
 
     docker run -it --rm \
-        $USE_GPUS \
         --user $(id -u):$(id -g) \
         --env="DISPLAY=$DISPLAY" \
         --env="QT_X11_NO_MITSHM=1" \

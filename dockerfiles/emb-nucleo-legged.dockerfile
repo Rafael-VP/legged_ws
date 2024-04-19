@@ -8,7 +8,7 @@ ENV LANG=C.UTF-8
 
 RUN apt update && apt upgrade -y
 
-RUN apt install curl git build-essential -y
+RUN apt install curl git build-essential cmake make -y
 
 RUN apt-get update
 
